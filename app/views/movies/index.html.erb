@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
+<div>
+<ul>
+  <li><a href="#">Home</a></li>
+  <li><a href="movies/new">New</a></li>
+  <li><a href="#">Contact</a></li>
+  <li><a href="#">About</a></li><br>
+</ul>
+</div>
+
+<div class="container">
+  <!-- Content here -->
+  <h1 class="alert alert-primary">welcome to jorahentertainment movie store app</h1>
+  <input type="text"placeholder="find search.....">
+    <h1> SONY FILM PRODUCTION LIMITED</h1>
+</div>
+<div class="row">
+  <% @movies.each do |movie| %>
+
+  <div class="col-sm-8 col-md-4">
+
+    <div class="thumbnail">
+      <%= link_to (image_tag movie.image.url(:medium), class: 'image'), movie %>
+    </div>
+  </div>
+
+ <% end -%>
+</div>
